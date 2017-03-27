@@ -12,16 +12,20 @@ main {
 }
 
 .btn-outline-secondary:hover {
-	box-shadow: 8px 8px 0px 0px #000;
+	-webkit-box-shadow: 8px 8px 0px 0px #000;
+	        box-shadow: 8px 8px 0px 0px #000;
 	border-color: #000;
 	color: black;
 }
 
 .btn-outline-secondary:active {
-	box-shadow: 3px 3px 0px 0px #000;
+	-webkit-box-shadow: 3px 3px 0px 0px #000;
+	        box-shadow: 3px 3px 0px 0px #000;
 	border: 2px solid #000;
 	background-color: #e5e5e5;
-	transition-duration: 0s;
+	-webkit-transition-duration: 0s;
+	     -o-transition-duration: 0s;
+	        transition-duration: 0s;
 }
 
 .search-input {
@@ -32,7 +36,8 @@ main {
 }
 
 .search-input:focus {
-	box-shadow: 8px 8px 0px 0px #000;
+	-webkit-box-shadow: 8px 8px 0px 0px #000;
+	        box-shadow: 8px 8px 0px 0px #000;
 	border-color: #000;
 	color: black;
 }
@@ -75,6 +80,10 @@ main {
 .main-graphic {
     width: 75%;
     margin-bottom: 30px;
+}
+
+.card {
+	border-radius: 0px;
 }
 
 .card-section {

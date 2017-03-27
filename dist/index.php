@@ -44,7 +44,7 @@ else {
 				<h1>/<em>ah-mee-chee </em>/</h1>
 				<h4>noun</h4>
 				<ol>
-					<li><p>(US slang) a telephone, after Don Ameche</p></li>
+					<li><p>(US slang, c. 1940's) a telephone, after Don Ameche</p></li>
 					<li><p>the absolute best way to find your local, state, and federal representatives</p></li>
 				</ol>
 			</div>
@@ -129,9 +129,6 @@ foreach ($data->officials as $person) {
 			'.(isset($person->channels[3])? '</br>' : '').'
 
 			'.(isset($person->channels[3])? '<img class="contact-icon" src="icons/'.$person->channels[3]->type.'.svg" alt="'.$person->channels[3]->type.'"> '.$person->channels[3]->id.'' : '').'
-			</br>
-
-			'.(isset($person->channels[0]->type)? 'GooglePlus : '.$person->channels[0]->id.'' : 'Account').'
 			</p>
 		  </li>';
 	echo '</ul>';

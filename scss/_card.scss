@@ -12,7 +12,13 @@
   background-color: $card-bg;
   //border: $card-border-width solid $card-border-color;
   @include border-radius($card-border-radius);
-  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
+  border: 3px solid #000;
+  transition-duration: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 8px 8px 0px 0px #000;
+  transition-duration: 0.3s;
 }
 
 .card-block {
@@ -175,7 +181,7 @@
 
 // Card image caps
 .card-img-top {
-  @include border-top-radius($card-border-radius-inner);
+  // @include border-top-radius($card-border-radius-inner);
   height: 300px;
   overflow: hidden;
   background-repeat: no-repeat; 
