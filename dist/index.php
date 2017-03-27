@@ -23,7 +23,7 @@ else {
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Ameche | Identify your Representatives</title>
+	<title>Ameche | Find Your Representatives</title>
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
