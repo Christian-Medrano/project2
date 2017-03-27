@@ -23,11 +23,12 @@ else {
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Demo </title>
+	<title>Ameche | Identify your Representatives</title>
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" type="image/png" href="icons/favicon.png"/>
 </head>
 <body>
 
