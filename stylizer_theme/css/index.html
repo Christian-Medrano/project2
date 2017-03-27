@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello Stylizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bootstrap.css">
+  </head>
+  <body>
+
+  <!-- NAVBAR -->
+    <nav class="navbar navbar-toggleable-md sticky-top navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#stylizer-navbar" aria-controls="stylizer-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Hello</a>
+
+      <div class="collapse navbar-collapse" id="stylizer-navbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Style Guide <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://stylizer.io">Stylizer</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  <!-- END NAVBAR -->
+
+  <!-- JUMBOTRON -->
+    <div class="jumbotron bg-brand-primary">
+      <div class="container">
+        <h1 class="text-center">Your Style Guide</h1>
+        <p class="lead">This is your style guide. It demonstrates the customizations you made with Stylizer.io. You can change its appearance at any time by makeing adjustments to the SCSS files, or by getting back on Stylizer and testing out some new looks. It only takes a few minutes as you already know.</p>
+        <div class="text-center">
+          <button class="btn btn-primary">
+            Get Started
+          </button> 
+        </div>
+      </div>
+    </div>
+  <!-- END JUMBOTRON -->
+
+  <!-- CONTENT -->
+    <main class="container">
+
+    <!-- HEADINGS -->
+      <div class="row pb-4">
+        <div class="col-12 col-md-4">
+          <h2 class="h1">Headings</h2>
+          <p>Stylizer allows you to customize up to four heading levels; shown here are all six to help you get a better idea of how they all work together.</p>
+        </div>
+        <div class="col-12 col-md-8">
+          <h1>Hello Stylizer</h1>
+          <hr>
+          <h2>Hello Stylizer</h2>
+          <hr>
+          <h3>Hello Stylizer</h3>
+          <hr>
+          <h4>Hello Stylizer</h4>
+          <hr>
+          <h5>Hello Stylizer</h5>
+          <hr>
+          <h6>Hello Stylizer</h6>
+        </div>
+      </div>
+    <!-- END HEADINGS -->
+
+    <hr class="my-4">
+
+    <!-- PARAGRAPHS -->
+      <div class="row py-4">
+        <div class="col-12 col-md-4">
+          <h2 class="h1">Paragraphs</h2>
+          <p>Here are two paragraph examples. The first is using Bootstrap&rsquo;s <code>.lead</code> class; the second is a generic, general purpose paragraph.</p>
+        </div>
+        <div class="col-12 col-md-8">
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing albo. Quibusdam neque reiciendis quo sint quidem sed, exercitationem vero consequuntur, nam ducimus recusandae magnam. Aperiam delectus vel corporis maxime. Dolores, beatae, consequuntur.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde alias deserunt itaque libero recusandae excepturi, nam maiores consectetur blanditiis harum sunt optio perferendis commodi facilis sequi aliquam, veritatis ullam magni.</p>
+        </div>
+      </div>  
+    <!-- END PARAGRAPHS -->
+
+    <hr class="my-4">
+
+    <!-- LINKS -->
+      <div class="row py-4">
+        <div class="col-12 col-md-4">
+          <h2 class="h1">Links</h2>
+          <p>What&rsquo;s a website without links? Here&rsquo;s a sample demonstrating your link styles.</p>
+        </div>
+        <div class="col-12 col-md-8">
+          <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus corporis vel consequatur <a href="https://stylizer.io">Web Style Guides in Minutes</a> praesentium ratione quam, baba do voluptates nihil, aperiam, deleniti aut, modi odit molestiae porro hic alias numquam.
+          </p>
+          <p>Thick joshua trees provide <a href="https://stylizer.io">wonderful shade</a> for quiet young foxes sizzling under the bright morning sun. Lorem ipsum urbem palmarum eximius.</p>
+        </div>
+      </div>  
+    <!-- END LINKS -->
+
+    <hr class="my-4">
+
+    <!-- BUTTONS -->
+      <div class="row py-4">
+        <div class="col-12 col-md-4">
+          <h2 class="h1">Buttons</h2>
+          <p>Stylizer targets two buttons: default, and primary. Default affects almost every button type, while primary is specific to just one type.</p>
+        </div>
+        <div class="col-12 col-md-8 align-self-center">
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <button type="button" class="btn btn-primary">Primary</button>
+
+          <!-- Secondary, outline button -->
+          <button type="button" class="btn btn-secondary">Secondary</button>
+
+          <!-- Indicates a successful or positive action -->
+          <button type="button" class="btn btn-success">Success</button>
+
+          <!-- Contextual button for informational alert messages -->
+          <button type="button" class="btn btn-info">Info</button>
+
+          <!-- Indicates caution should be taken with this action -->
+          <button type="button" class="btn btn-warning">Warning</button>
+
+          <!-- Indicates a dangerous or potentially negative action -->
+          <button type="button" class="btn btn-danger">Danger</button>
+
+          <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+          <button type="button" class="btn btn-link">Link</button>
+        </div>
+      </div>  
+    <!-- END BUTTONS -->
+
+    <hr class="my-4">
+
+    <!-- FORMS -->
+      <div class="row py-4">
+        <div class="col-12 col-md-4">
+          <h2 class="h1">Forms</h2>
+          <p>Stylizer lets you adjust form inputs. Here&rsquo;s what you cooked up.</p>
+        </div>
+        <div class="col-12 col-md-8 align-self-center">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="First Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" class="form-control" id="email" placeholder="Email Address">
+            </div>
+          </form>
+        </div>
+      </div>  
+    <!-- END FORMS -->
+
+    <hr class="my-4">
+
+    <!-- Colors -->
+      <div class="row py-4">
+        <div class="col-12 col-md-4">
+          <h2 class="h1">Colors</h2>
+          <p>Color swatches for brand, color and grayscale with related font colors for each. We&rsquo;ve included some background utility classes for each of these as well (see below). Note that the font size will automatically adjust, depending on if the background is light or dark, when your SCSS is compiled.</p>
+          <h3>Utility Classes</h3>
+          <ul class="list-unstyled">
+            <li>
+              <code>.bg-brand-primary</code>
+            </li>
+            <li>
+              <code>.bg-brand-secondary</code>
+            </li>
+            <li>
+              <code>.bg-red</code>
+            </li>
+            <li>
+              <code>.bg-orange</code>
+            </li>
+            <li>
+              <code>.bg-yellow</code>
+            </li>
+            <li>
+              <code>.bg-green</code>
+            </li>
+            <li>
+              <code>.bg-blue</code>
+            </li>
+            <li>
+              <code>.bg-teal</code>
+            </li>
+            <li>
+              <code>.bg-pink</code>
+            </li>
+            <li>
+              <code>.bg-purple</code>
+            </li>
+            <li>
+              <code>.bg-white</code>
+            </li>
+            <li>
+              <code>.bg-gray-lightest</code>
+            </li>
+            <li>
+              <code>.bg-gray-lighter</code>
+            </li>
+            <li>
+              <code>.bg-gray-light</code>
+            </li>
+            <li>
+              <code>.bg-gray</code>
+            </li>
+            <li>
+              <code>.bg-gray-darker</code>
+            </li>
+            <li>
+              <code>.bg-black</code>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-8 align-self-center">
+          <div class="row">
+
+          <!-- Brand Primary -->
+            <div class="col-12 col-md-6 bg-brand-primary d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">Brand Primary</p>
+            </div>
+          <!-- END Brand Primary -->
+
+          <!-- Brand Secondary -->
+            <div class="col-12 col-md-6 bg-brand-secondary d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">Brand Secondary</p>
+            </div>
+          <!-- END Brand Secondary -->
+
+          </div>
+          <div class="row">
+
+          <!-- Brand Red -->
+            <div class="col-12 col-md-3 bg-red d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">Red</p>
+            </div>
+          <!-- END Brand Red -->
+
+          <!-- Brand Orange -->
+            <div class="col-12 col-md-3 bg-orange d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">Orange</p>
+            </div>
+          <!-- END Brand Orange -->
+
+          <!-- Brand Yellow -->
+            <div class="col-12 col-md-3 bg-yellow d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">Yellow</p>
+            </div>
+          <!-- END Brand Yellow -->
+
+          <!-- Brand Green -->
+            <div class="col-12 col-md-3 bg-green d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">Green</p>
+            </div>
+          <!-- END Brand Green -->
+
+          </div>
+          <div class="row">
+
+          <!-- Brand Blue -->
+            <div class="col-12 col-md-3 bg-blue d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">Blue</p>
+            </div>
+          <!-- END Brand Blue -->
+
+          <!-- Brand Teal -->
+            <div class="col-12 col-md-3 bg-teal d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">Teal</p>
+            </div>
+          <!-- END Brand Teal -->
+
+          <!-- Brand Pink -->
+            <div class="col-12 col-md-3 bg-pink d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">Pink</p>
+            </div>
+          <!-- END Brand Pink -->
+
+          <!-- Brand Purple -->
+            <div class="col-12 col-md-3 bg-purple d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">Purple</p>
+            </div>
+          <!-- END Brand Purple -->
+
+          </div>
+          <div class="row">
+
+          <!-- Brand White -->
+            <div class="col-12 col-md-3 bg-white d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">White</p>
+            </div>
+          <!-- END Brand White -->
+
+          <!-- Brand Gray Lightest -->
+            <div class="col-12 col-md-3 bg-gray-lightest d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">Gray Lightest</p>
+            </div>
+          <!-- END Brand Gray Lightest -->
+
+          <!-- Brand Gray Lighter -->
+            <div class="col-12 col-md-3 bg-gray-lighter d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">Gray Lighter</p>
+            </div>
+          <!-- END Brand Gray Lighter -->
+
+          <!-- Brand Gray Light -->
+            <div class="col-12 col-md-3 bg-gray-light d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">Gray Light</p>
+            </div>
+          <!-- END Brand Gray Light -->
+
+          </div>
+          <div class="row">
+
+          <!-- Brand Gray -->
+            <div class="col-12 col-md-3 bg-gray d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">Gray</p>
+            </div>
+          <!-- END Brand Gray -->
+
+          <!-- Brand Gray Dark -->
+            <div class="col-12 col-md-3 bg-gray-dark d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">Gray Dark</p>
+            </div>
+          <!-- END Brand Gray Dark -->
+
+          <!-- Brand Black -->
+            <div class="col-12 col-md-3 bg-black d-flex align-items-center justify-content-center py-120px">
+              <p class="lead font-weight-bold">Black</p>
+            </div>
+          <!-- END Brand Black -->
+
+          </div>
+
+        </div>
+      </div>  
+    <!-- END Colors -->
+
+    <hr class="my-4">
+
+    </main>
+  <!-- END CONTENT -->
+
+    <footer class="container text-center py-4">
+      <p>Made with <a href="https://stylizer.io">Stylizer</a></p>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>

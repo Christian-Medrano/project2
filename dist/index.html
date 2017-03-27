@@ -2,12 +2,258 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Who's Calling?</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<title>Project 2</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i|Oswald:200,300,400,500,600,700" rel="stylesheet">
 </head>
 <body>
-	<h1>This font is called Oswald.</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam iste amet aliquam, odit aspernatur, asperiores, veritatis soluta placeat velit sed ullam repellat rerum molestiae consectetur at non delectus eum! Architecto? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi obcaecati laudantium tempora totam ut quisquam quia, commodi perspiciatis odit incidunt quae maiores dicta aspernatur ea vel doloribus excepturi sint itaque! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis accusamus ipsam odit inventore molestias, provident quos, quidem repudiandae ipsa iusto, libero ex adipisci laudantium explicabo nihil maiores magnam, officiis nostrum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo numquam obcaecati blanditiis at quam architecto, cum vitae assumenda itaque iste totam, cupiditate fugit labore doloribus similique! Labore consectetur officia, tenetur!</p>
+	<!-- navbar -->
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+		<button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button> <a class="navbar-brand" href="#">
+		<h4>Project 2</h4></a>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto mt-2 mt-md-0">
+				<li class="nav-item">
+					<a class="nav-link" href="#federal">Federal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#state">State</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#local">Local</a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" placeholder="Zipcode" type="text"> <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+			</form>
+		</div>
+	</nav><!-- /navbar -->
+	<!-- map -->
+	<iframe allowfullscreen class="margin-top" frameborder="0" height="450px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52741.77317838289!2d-118.54882149343733!3d34.290347932449805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2854ba65fb035%3A0x31e598d7afd8642!2sGranada+Hills%2C+CA+91344!5e0!3m2!1sen!2sus!4v1488573993844" style="border:0" width="100%"></iframe> <!-- /map -->
+	 <!-- main -->
+	<main class="container-fluid bg-faded">
+
+		<div class="container">
+
+			<!-- federal -->
+			<div id="federal" class="row card-section">
+
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="card align-center">
+						<img alt="Card image cap" class="card-img-top" src="images/dianne-feinstein.jpg">
+						<div class="card-block">
+							<h4 class="card-title">Dianne Feinstein</h4>
+							<h6>US SENATOR - (D)</h6>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<img class="contact-icon" src="icons/web.svg" alt="">
+									<a href="https://www.feinstein.senate.gov" target="_blank">feinstein.senate.gov</a>
+								</li>
+								<li class="list-group-item"><img class="contact-icon" src="icons/phone.svg" alt="">(202) 224-3841</li>
+								<li class="list-group-item">331 Hart Senate Office Building<br>
+								Washington, D.C. 20510</li>
+								<li class="list-group-item">
+									<a href="https://www.feinstein.senate.gov/public/index.cfm/e-mail-me" target="_blank"><button class="btn btn-primary">send a message</button></a>
+								</li>
+								<li class="list-group-item">
+									<a href="https://twitter.com/senfeinstein" target="blank"><img class="sm-icon" src="icons/twitter.svg" alt="twitter icon"></a>
+									<a href="https://www.facebook.com/SenatorFeinstein/" target="blank"><img class="sm-icon" src="icons/facebook.svg" alt="facebook icon"></a>
+									<a href="https://www.youtube.com/user/SenatorFeinstein" target="blank"><img class="sm-icon" src="icons/youtube.svg" alt="youtube icon"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="card align-center">
+						<img alt="Card image cap" class="card-img-top" src="images/kamala-harris.jpg">
+						<div class="card-block">
+							<h4 class="card-title">Kamala Harris</h4>
+							<h6>US SENATOR - (D)</h6>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<img class="contact-icon" src="icons/web.svg" alt="">
+									<a href="https://www.harris.senate.gov" target="_blank">harris.senate.gov</a>
+								</li>
+								<li class="list-group-item"><img class="contact-icon" src="icons/phone.svg" alt="">(202) 224-3553</li>
+								<li class="list-group-item">112 Hart Senate Office Building<br>
+								Washington, D.C. 20510</li>
+								<li class="list-group-item">
+									<a href="https://www.harris.senate.gov/content/contact-senator" target="_blank"><button class="btn btn-primary">send a message</button></a>
+								</li>
+								<li class="list-group-item">
+									<a href="https://twitter.com/SenKamalaHarris" target="blank"><img class="sm-icon" src="icons/twitter.svg" alt="twitter icon"></a>
+									<a href="https://www.facebook.com/SenatorKamalaHarris/" target="blank"><img class="sm-icon" src="icons/facebook.svg" alt="facebook icon"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="card align-center">
+						<img alt="Card image cap" class="card-img-top" src="images/tony-cardenas.jpg">
+						<div class="card-block">
+							<h4 class="card-title">Tony Cardenas</h4>
+							<h6>US REPRESENTATIVE - (D)</h6>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<img class="contact-icon" src="icons/web.svg" alt="">
+									<a href="https://cardenas.house.gov/" target="_blank">cardenas.house.gov</a>
+								</li>
+								<li class="list-group-item"><img class="contact-icon" src="icons/phone.svg" alt="">(202) 225-6131</li>
+								<li class="list-group-item">1510 Longworth House Office Building<br>
+								(Fifth floor of Longworth HOB)<br>
+								Washington, DC 20515</li>
+								<li class="list-group-item">
+									<a href="https://cardenas.house.gov/contact-me" target="_blank"><button class="btn btn-primary">send a message</button></a>
+								</li>
+								<li class="list-group-item">
+									<a href="https://twitter.com/repcardenas" target="blank"><img class="sm-icon" src="icons/twitter.svg" alt="twitter icon"></a>
+									<a href="https://www.facebook.com/repcardenas" target="blank"><img class="sm-icon" src="icons/facebook.svg" alt="facebook icon"></a>
+									<a href="https://www.youtube.com/user/repcardenas" target="blank"><img class="sm-icon" src="icons/youtube.svg" alt="youtube icon"></a>
+									<a href="https://www.instagram.com/repcardenas/" target="blank"><img class="sm-icon" src="icons/instagram.svg" alt="instagram icon"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+			</div> <!-- /row -->
+		
+
+
+			<!-- state -->
+			<div id="local" class="row card-section">
+
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="card align-center">
+						<img alt="Card image cap" class="card-img-top" src="images/robert-hertzberg.jpg">
+						<div class="card-block">
+							<h4 class="card-title">Robert Hertzberg</h4>
+							<h6>STATE SENATOR - (D)</h6>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<img class="contact-icon" src="icons/web.svg" alt="">
+									<a href="http://sd18.senate.ca.gov/" target="_blank">sd18.senate.ca.gov</a>
+								</li>
+								<li class="list-group-item"><img class="contact-icon" src="icons/phone.svg" alt="">(916) 651-4018</li>
+								<li class="list-group-item">
+									State Capitol, Room 4038<br>
+									Sacramento, CA 95814
+								</li>
+								<li class="list-group-item">
+									<a href="http://sd18.senate.ca.gov/contact/email" target="_blank"><button class="btn btn-primary">send a message</button></a>
+								</li>
+								<li class="list-group-item">
+									<a href="https://twitter.com/SenateHertzberg" target="blank"><img class="sm-icon" src="icons/twitter.svg" alt="twitter icon"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="card align-center">
+						<img alt="Card image cap" class="card-img-top" src="images/raul-bocanegra.jpg">
+						<div class="card-block">
+							<h4 class="card-title">Raul Bocanegra</h4>
+							<h6>STATE ASSEMBLYMAN - (D)</h6>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<img class="contact-icon" src="icons/web.svg" alt="">
+									<a href="https://a39.asmdc.org/" target="_blank">a39.asmdc.org/</a>
+								</li>
+								<li class="list-group-item"><img class="contact-icon" src="icons/phone.svg" alt="">(916) 319-2039</li>
+								<li class="list-group-item">
+									P.O. Box 942849<br>
+									Sacramento, CA 94249-0039
+								</li>
+								<li class="list-group-item">
+									<a href="https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=AD39" target="_blank"><button class="btn btn-primary">send a message</button></a>
+								</li>
+								<li class="list-group-item">
+									<a href="https://twitter.com/AsmBocanegra" target="blank"><img class="sm-icon" src="icons/twitter.svg" alt="twitter icon"></a>
+									<a href="https://www.facebook.com/AsmBocanegra/" target="blank"><img class="sm-icon" src="icons/facebook.svg" alt="facebook icon"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /state -->
+
+
+
+			<!-- local -->
+			<div id="state" class="row card-section">
+
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="card align-center">
+						<img alt="Card image cap" class="card-img-top" src="images/mitchell-englander.jpg">
+						<div class="card-block">
+							<h4 class="card-title">Mitchell Englander</h4>
+							<h6>CITY COUNCILMAN - (R)</h6>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<img class="contact-icon" src="icons/web.svg" alt="">
+									<a href="http://www.cd12.org/welcome?splash=1" target="_blank">cd12.org</a>
+								</li>
+								<li class="list-group-item"><img class="contact-icon" src="icons/phone.svg" alt="">(213) 473-7012</li>
+								<li class="list-group-item">
+									200 North Spring Street<br>
+									Room 405<br>
+									Los Angeles, CA 90012</li>
+								<li class="list-group-item">
+									<a href="mailto:Councilmember.Englander@lacity.org" target="_blank"><button class="btn btn-primary">send a message</button></a>
+								</li>
+								<li class="list-group-item">
+									<a href="https://twitter.com/Mitch_Englander" target="blank"><img class="sm-icon" src="icons/twitter.svg" alt="twitter icon"></a>
+									<a href="https://www.facebook.com/MitchellEnglander/" target="blank"><img class="sm-icon" src="icons/facebook.svg" alt="facebook icon"></a>
+									<a href="https://www.instagram.com/mitchenglander/" target="blank"><img class="sm-icon" src="icons/instagram.svg" alt="instagram icon"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="card align-center">
+						<img alt="Card image cap" class="card-img-top" src="images/sheila-kuehl.jpg">
+						<div class="card-block">
+							<h4 class="card-title">Sheila Kuehl</h4>
+							<h6>COUNTY SUPERVISOR - (D)</h6>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<img class="contact-icon" src="icons/web.svg" alt="">
+									<a href="http://supervisorkuehl.com/" target="_blank">supervisorkuehl.com</a>
+								</li>
+								<li class="list-group-item"><img class="contact-icon" src="icons/phone.svg" alt="">(213) 974-3333</li>
+								<li class="list-group-item">
+									821 Kenneth Hahn Hall of Administration<br>
+									500 W. Temple St.<br>
+									Los Angeles, CA 90012</li>
+								<li class="list-group-item">
+									<a href="http://supervisorkuehl.com/contact/" target="_blank"><button class="btn btn-primary">send a message</button></a>
+								</li>
+								<li class="list-group-item">
+									<a href="https://twitter.com/sheilakuehl" target="blank"><img class="sm-icon" src="icons/twitter.svg" alt="twitter icon"></a>
+									<a href="https://www.facebook.com/sjkuehl" target="blank"><img class="sm-icon" src="icons/facebook.svg" alt="facebook icon"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /local -->
+
+		</div>
+	</main>
+	<footer class="container-fluid bg-inverse footer"></footer>
 </body>
 </html>

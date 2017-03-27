@@ -4,3 +4,5 @@ Christian Medrano
 
 ## Features
 
+- Legislator finder website
+- Powered by Bootstrap

@@ -1,0 +1,269 @@
+
+        //  ___ _______   ___    ___ _______ ___ 
+        // / __|_   _\ \ / / |  |_ _|_  / __| _ \
+        // \__ \ | |  \ V /| |__ | | / /| _||   /
+        // |___/ |_|   |_| |____|___/___|___|_|_\
+        // https://stylizer.io
+        // 1.0.0-beta
+        //
+        // Here are your customizations. :)
+        //
+        // Custom variables for Bootstrap 4. Used
+        // primarily by _stylizer.scss partial,
+        // also overwrites Bootstrap !default
+        // variables for consistency.
+        //
+        // Table of Contents:
+        // Colors
+        // Typography
+        // Heading One
+        // Heading Two
+        // Heading Three
+        // Heading Four
+        // Paragraph
+        // Links
+        // Buttons
+        // Forms
+        // Backgrounds
+
+        @import url("https://fonts.googleapis.com/css?family=Oswald");@import url("https://fonts.googleapis.com/css?family=Merriweather");
+
+        ////
+        // Colors
+        ////
+
+        // Colors
+        $white:  #ffffff;
+        $black:  #000000;
+        $red:    #ff0000;
+        $orange: #ff8000;
+        $yellow: #ffff00;
+        $green:  #00ff00;
+        $blue:   #0000ff;
+        $teal:   #008080;
+        $pink:   #ff6fcf;
+        $purple: #8000ff;
+
+        // Grayscale
+        $gray-dark:     #292b2c;
+        $gray:          #464a4c;
+        $gray-light:    #636c72;
+        $gray-lighter:  #eceeef;
+        $gray-lightest: #f7f7f9;
+
+        // Brand
+        $brand-primary:   #004080;
+        $brand-secondary: #ff8000;
+
+
+        ////
+        // Typography
+        ////
+
+        // Heading One
+        $headline_one_color:          #292b2c;
+        $headline_one_font_size:      40px;
+        $headline_one_line_height:    1.1;
+        $headline_one_letter_spacing: 0px;
+        $headline_one_font_weight:    400;
+        $headline_one_font_family:    Oswald;
+        $headline_one_text_transform: none;
+        
+        // Heading Two
+        $headline_two_color:          #292b2c;
+        $headline_two_font_size:      32px;
+        $headline_two_line_height:    1.1;
+        $headline_two_letter_spacing: 0px;
+        $headline_two_font_weight:    400;
+        $headline_two_font_family:    Oswald;
+        $headline_two_text_transform: none;
+
+        // Headng Three
+        $headline_three_color:          #000000;
+        $headline_three_font_size:      28px;
+        $headline_three_line_height:    1.1;
+        $headline_three_letter_spacing: 0px;
+        $headline_three_font_weight:    400;
+        $headline_three_font_family:    Oswald;
+        $headline_three_text_transform: none;
+
+        // Heading Four
+        $headline_four_color:           #000000;
+        $headline_four_font_size:       24px;
+        $headline_four_line_height:     1.1;
+        $headline_four_letter_spacing:  0px;
+        $headline_four_font_weight:     400;
+        $headline_four_font_family:     Oswald;
+        $headline_four_text_transform:  none;
+
+        // Reset Bootstrap 4 heading defaults with Stylizer styles
+        // The _stylizer.scss partial uses the Stylizer variables, the resets
+        // below just ensure everything else gets covered.
+        $font-size-h1: $headline_one_font_size;
+        $font-size-h2: $headline_two_font_size;
+        $font-size-h3: $headline_three_font_size;
+        $font-size-h4: $headline_four_font_size;
+
+        $headings-font-family:  $headline_one_font_family;
+        $headings-font-weight:  $headline_one_font_weight;
+        $headings-line-height:  $headline_one_line_height;
+        $headings-color:        $headline_one_color;
+
+        // There are currently no ways to customize the size and weight
+        // of the .display-x classes using Stylizer; however, we reset
+        // the .display-x variables here to be multiples of whatever
+        // you set your h1 too, this way the .display-x classes are
+        // proportional, no matter what heading sizes you end up
+        // using. Uncomment to use our resets.
+
+        // $display1-size: $font-size-h1*3;
+        // $display2-size: $font-size-h1*2.5;
+        // $display3-size: $font-size-h1*2;
+        // $display4-size: $font-size-h1*1.5;
+
+        // Paragraphs
+        $paragraph_color: 			#000000;
+        $paragraph_font_size: 		16px;
+        $paragraph_line_height: 	1.25;
+        $paragraph_letter_spacing:  0px;  
+        $paragraph_font_weight: 	400;
+        $paragraph_font_family: 	Merriweather;
+
+        // Reset Bootstrap 4 text defaults with Stylizer styles
+        // The _stylizer.scss partial uses the Stylizer variables, the resets
+        // below just ensure everything else gets covered.
+        // $font-size-base:    $paragraph_font_size;
+        // $font-size-lg:      $paragraph_font_size*1.25;
+        // $font-size-sm:      $paragraph_font_size*.875;
+        // $font-size-xs:      $paragraph_font_size*.75;
+        // $font-weight-base:  $paragraph_font_weight;
+        // $line-height-base:  $paragraph_line_height;
+
+
+        ////
+        // Links
+        ////
+
+        // LVHA font colors, weights and decoration
+        $link_color:                    #ff8000;
+        $link_text_decoration:          none;
+        $link_font_weight:              400;
+        $link_visited_color:            #804000;
+        $link_visited_text_decoration:  none;
+        $link_hover_color:              #ff8000;
+        $link_hover_text_decoration:    underline;
+        $link_active_color:             #804000;
+        $link_active_text_decoration:   underline;
+
+        // Reset Bootstrap 4 link defaults with Stylizer styles.
+        // The _stylizer.scss partial uses the Stylizer variables, the resets
+        // below just ensure everything else gets covered.
+        $link-color:            $brand-primary !default;
+        $link-decoration:       none !default;
+        $link-hover-color:      darken($link-color, 15%) !default;
+        $link-hover-decoration: underline !default;
+
+
+        ////
+        // Buttons
+        ////
+
+        // Button Default
+        $button_default_color:              #000000;
+        $button_default_font_size:          16px;
+        $button_default_line_height:        1.25;
+        $button_default_letter_spacing:     0px;
+        $button_default_font_weight:        400;
+        $button_default_font_family:        Oswald;
+        $button_default_background_color:   #c0c0c0;
+        $button_default_padding_x:          16px;
+        $button_default_padding_y:          8px;
+        $button_default_border_radius:      4px;
+        $button_default_border_color:       #c0c0c0;
+        $button_default_border_width:       1px;
+        $button_default_text_transform:     none;
+
+        // Button Default :hover
+        $button_default_hover_color:            #000000;
+        $button_default_hover_background_color: #c0c0c0;
+        $button_default_hover_border_color:     #c0c0c0;
+
+        // Button Primary
+        $button_primary_color:              #004080;
+        $button_primary_font_size:          16px;
+        $button_primary_line_height:        1.25;
+        $button_primary_letter_spacing:     0;
+        $button_primary_font_weight:        400;
+        $button_primary_font_family:        Oswald;
+        $button_primary_background_color:   #ffffff;
+        $button_primary_padding_x:          16px;
+        $button_primary_padding_y:          8px;
+        $button_primary_border_radius:      4px;
+        $button_primary_border_color:       #004080;
+        $button_primary_border_width:       3px;
+        $button_primary_text_transform:     none;
+
+        // Button Primary :hover
+        $button_primary_hover_color:            #ffffff;
+        $button_primary_hover_background_color: #004080;
+        $button_primary_hover_border_color:     #004080;
+
+        // Reset Bootstrap 4 button defaults with Stylizer styles.
+        // The _stylizer.scss partial uses the Stylizer variables, the resets
+        // below just ensure everything else gets covered.
+        $btn-padding-x:   $button_default_padding_x;
+        $btn-padding-y:   $button_default_padding_y;
+        $btn-line-height: $button_default_line_height;
+        $btn-font-weight: $button_default_font_weight;
+
+        $btn-primary-color:   $button_primary_color;
+        $btn-primary-bg:      $button_primary_background_color;
+        $btn-primary-border:  $button_primary_border_color;
+
+
+        ////
+        // Forms
+        ////
+
+        // Forms
+        $forms_input_font_size:         16px;
+        $forms_input_line_height:       1.25;
+        $forms_input_font_family:       Source Sans Pro;
+        $forms_input_color:             #808080;
+        $forms_input_background_color:  #ffffff;
+        $forms_input_border_color:      #cccccc;
+        $forms_input_border_radius:     4px;
+        $forms_input_border_width:      1px;
+
+        // Forms Focus
+        $forms_input_focus_color:             #000000;
+        $forms_input_focus_background_color:  #f2f2f2;
+        $forms_input_focus_border_color:      #ff8000;
+
+        // Reset Bootstrap 4 form input defaults with Stylizer styles.
+        // The _stylizer.scss partial uses the Stylizer variables, the resets
+        // below just ensure everything else gets covered.
+        $input-line-height:       $forms_input_line_height;
+        $input-color:             $forms_input_color;
+        $input-bg:                $forms_input_background_color;
+        $input-border-color:      $forms_input_border_color;
+        $input-border-radius:     $forms_input_border_radius;
+        $input-btn-border-width:  $forms_input_border_width;
+
+        $input-color-focus:   $forms_input_focus_color;
+        $input-bg-focus:      $forms_input_focus_background_color;
+        $input-border-focus:  $forms_input_focus_border_color;
+
+
+        ////
+        // Backgrounds
+        ////
+
+        $background_brand_primary:    #004080;
+        $background_brand_secondary:  #ff8000;
+
+
+        // Enjoy,
+        // -Trev, Chas, Pete
+
+      

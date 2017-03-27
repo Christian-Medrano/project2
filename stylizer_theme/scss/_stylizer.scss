@@ -1,0 +1,415 @@
+//  ___ _______   ___    ___ _______ ___ 
+// / __|_   _\ \ / / |  |_ _|_  / __| _ \
+// \__ \ | |  \ V /| |__ | | / /| _||   /
+// |___/ |_|   |_| |____|___/___|___|_|_\
+// https://stylizer.io
+// 1.0.0-beta
+//
+// Stylizer Custom Classes and Resets
+
+// Bootstrap uses mixins and other hard coded values to style
+// things like hover and active states; apply font sizes
+// and line heights; create background colors and more.
+
+// Stylizer attempts to reset things here to better align it
+// with the customizations you make.
+//
+// Table of Contents:
+// Typography
+// Heading One
+// Heading Two
+// Heading Three
+// Heading Four
+// Paragraph
+// Links
+// Buttons
+// Forms
+// Backgrounds
+
+
+//
+// Type - Headings
+// Originals in: _type.scss
+//
+h1,
+.h1 {
+  color: $headline_one_color;
+  font-family: $headline_one_font_family;
+  font-size: $headline_one_font_size;
+  font-weight: $headline_one_font_weight;
+  letter-spacing: $headline_one_letter_spacing;
+  line-height: $headline_one_line_height;
+  text-transform: $headline_one_text_transform;
+}
+
+h2,
+.h2 {
+  color: $headline_two_color;
+  font-family: $headline_two_font_family;
+  font-size: $headline_two_font_size;
+  font-weight: $headline_two_font_weight;
+  letter-spacing: $headline_two_letter_spacing;
+  line-height: $headline_two_line_height;
+  text-transform: $headline_two_text_transform;
+}
+
+h3,
+.h3 {
+  color: $headline_three_color;
+  font-family: $headline_three_font_family;
+  font-size: $headline_three_font_size;
+  font-weight: $headline_three_font_weight;
+  letter-spacing: $headline_three_letter_spacing;
+  line-height: $headline_three_line_height;
+  text-transform: $headline_three_text_transform;
+}
+
+h4,
+.h4 {
+  color: $headline_four_color;
+  font-family: $headline_four_font_family;
+  font-size: $headline_four_font_size;
+  font-weight: $headline_four_font_weight;
+  letter-spacing: $headline_four_letter_spacing;
+  line-height: $headline_four_line_height;
+  text-transform: $headline_four_text_transform;
+}
+
+
+//
+// Type - Body and Paragraphs
+// Originals in: _reboot.scss
+//
+body {
+  color: $paragraph_color;
+  font-family: $paragraph_font_family;
+}
+
+p {
+  font-family: $paragraph_font_family;
+  font-size: $paragraph_font_size;
+  font-weight: $paragraph_font_weight;
+  letter-spacing: $paragraph_letter_spacing;
+  line-height: $paragraph_line_height;
+}
+
+
+//
+// Links
+// Originals in: _reboot.scss
+//
+
+a,
+a:link {
+  color:  $link_color;
+  font-weight: $link_font_weight;
+  text-decoration: $link_text_decoration;
+}
+
+a:visited {
+  color:  $link_visited_color;
+  text-decoration: $link_visited_text_decoration;
+}
+
+a:hover {
+  color:  $link_hover_color;
+  text-decoration: $link_hover_text_decoration;
+}
+
+a:active {
+  color:  $link_active_color;
+  text-decoration: $link_active_text_decoration;
+}
+
+
+//
+// Buttons
+// Originals in: _buttons.scss
+//
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+// Style button defaults. These apply to all buttons.
+.btn,
+.btn-link,
+a.btn {
+  border-radius: $button_default_border_radius;
+  border-width: $button_default_border_width;
+  font-family: $button_default_font_family;
+  font-size: $button_default_font_size;
+  font-weight: $button_default_font_weight;
+  letter-spacing: $button_default_letter_spacing;
+  line-height: $button_default_line_height;
+  padding: $button_default_padding_y $button_default_padding_x;
+  text-transform: $button_default_text_transform;
+}
+
+// .btn:hover, @todo Remove before launch
+// .btn-link:hover,
+// a.btn:hover {
+//   color: $button_default_hover_color;
+//   background-color: $button_default_hover_background_color;
+//   border-color: $button_default_hover_border_color;
+// }
+
+// Styles for primary button
+.btn-primary,
+a.btn-primary {
+  background-color: $button_primary_background_color;
+  border-color: $button_primary_border_color;
+  border-radius: $button_primary_border_radius;
+  border-width: $button_primary_border_width;
+  color: $button_primary_color;
+  font-family: $button_primary_font_family;
+  font-size: $button_primary_font_size;
+  font-weight: $button_primary_font_weight;
+  letter-spacing: $button_primary_letter_spacing;
+  line-height: $button_primary_line_height;
+  padding: $button_primary_padding_y $button_primary_padding_x;
+  text-transform: $button_primary_text_transform;
+}
+
+.btn-primary:hover,
+a.btn-primary:hover {
+  color: $button_primary_hover_color;
+  background-color: $button_primary_hover_background_color;
+  border-color: $button_primary_hover_border_color;
+}
+
+
+//
+// Forms
+// Originals in: _reboot.scss and _forms.scss
+//
+
+input[type="text"],
+textarea,
+.form-control {
+  background-color: $forms_input_background_color;
+  border-color: $forms_input_border_color;
+  border-radius: $forms_input_border_radius;
+  border-width: $forms_input_border_width;
+  color: $forms_input_color;
+  font-family: $forms_input_font_family;
+  font-size: $forms_input_font_size;
+  line-height: $forms_input_line_height;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+.form-control:focus {
+  background-color: $forms_input_focus_background_color;
+  border-color: $forms_input_focus_border_color;
+  color: $forms_input_focus_color;
+}
+
+
+//
+// Utilities - Brand & Color Backgrounds
+// Originals in: utilities/_background.scss
+//
+
+// Change .bg-x font colors depending on brightness
+@function set-bg-font-color($color) {
+  @if (lightness($color) > 50) {
+    @return $paragraph_color; // Light background; default font
+  } @else {
+    @return $white; // Dark background; light font
+  }
+}
+
+// Headings have explicitly defined colors as of Beta 1, so we
+// created a mixin to handle the specificity overwrites for
+// each background color utility class.
+@mixin heading-font-color($bg-color) {
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4 {
+    color: set-bg-font-color($bg-color) !important;
+  }
+}
+
+// Brands
+.bg-brand-primary {
+  background-color: $brand-primary !important;
+  color: set-bg-font-color($brand-primary) !important;
+
+  @include heading-font-color($brand-primary);
+}
+
+.bg-brand-secondary {
+  background-color: $brand-secondary !important;
+  color: set-bg-font-color($brand-secondary) !important;
+
+  @include heading-font-color($brand-secondary);
+}
+
+// Colors
+.bg-red {
+  background-color: $red !important;
+  color: set-bg-font-color($red) !important;
+
+  @include heading-font-color($red);
+}
+
+.bg-orange {
+  background-color: $orange !important;
+  color: set-bg-font-color($orange) !important;
+
+  @include heading-font-color($orange);
+}
+
+.bg-yellow {
+  background-color: $yellow !important;
+  color: set-bg-font-color($yellow) !important;
+
+  @include heading-font-color($yellow);
+}
+
+.bg-green {
+  background-color: $green !important;
+  color: set-bg-font-color($green) !important;
+
+  @include heading-font-color($green);
+}
+
+.bg-blue {
+  background-color: $blue !important;
+  color: set-bg-font-color($blue) !important;
+
+  @include heading-font-color($blue);
+}
+
+.bg-teal {
+  background-color: $teal !important;
+  color: set-bg-font-color($teal) !important;
+
+  @include heading-font-color($teal);
+}
+
+.bg-pink {
+  background-color: $pink !important;
+  color: set-bg-font-color($pink) !important;
+
+  @include heading-font-color($pink);
+}
+
+.bg-purple {
+  background-color: $purple !important;
+  color: set-bg-font-color($purple) !important;
+
+  @include heading-font-color($purple);
+}
+
+// Grayscale
+.bg-white {
+  background-color: $white !important;
+  color: set-bg-font-color($white) !important;
+
+  @include heading-font-color($white);
+}
+
+.bg-gray-lightest {
+  background-color: $gray-lightest !important;
+  color: set-bg-font-color($gray-lightest) !important;
+
+  @include heading-font-color($gray-lightest);
+}
+
+.bg-gray-lighter {
+  background-color: $gray-lighter !important;
+  color: set-bg-font-color($gray-lighter) !important;
+
+  @include heading-font-color($gray-lighter);
+}
+
+.bg-gray-light {
+  background-color: $gray-light !important;
+  color: set-bg-font-color($gray-light) !important;
+
+  @include heading-font-color($gray-light);
+}
+
+.bg-gray {
+  background-color: $gray !important;
+  color: set-bg-font-color($gray) !important;
+
+  @include heading-font-color($gray);
+}
+
+.bg-gray-dark {
+  background-color: $gray-dark !important;
+  color: set-bg-font-color($gray-dark) !important;
+
+  @include heading-font-color($gray-dark);
+}
+
+.bg-black {
+  background-color: $black !important;
+  color: set-bg-font-color($black) !important;
+
+  @include heading-font-color($black);
+}
+
+
+//
+// Utilities - Spacing
+// Originals in: utilities/_spacing.scss
+//
+
+.py-12px {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.py-24px {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.py-36px {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.py-48px {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.py-60px {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.py-72px {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.py-84px {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+
+.py-96px {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.py-108px {
+  padding-top: 108px;
+  padding-bottom: 108px;
+}
+
+.py-120px {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+
+/*! Customized Using Stylizer.io */

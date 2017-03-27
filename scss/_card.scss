@@ -3,12 +3,16 @@
 //
 
 .card {
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
   position: relative;
   display: flex;
   flex-direction: column;
   background-color: $card-bg;
-  border: $card-border-width solid $card-border-color;
+  //border: $card-border-width solid $card-border-color;
   @include border-radius($card-border-radius);
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
 }
 
 .card-block {
@@ -164,10 +168,6 @@
 }
 .card-img-overlay {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   padding: $card-img-overlay-padding;
 }
 
@@ -176,6 +176,11 @@
 // Card image caps
 .card-img-top {
   @include border-top-radius($card-border-radius-inner);
+  height: 300px;
+  overflow: hidden;
+  background-repeat: no-repeat; 
+  background-size: 100%; 
+  background-position: top;
 }
 .card-img-bottom {
   @include border-bottom-radius($card-border-radius-inner);
