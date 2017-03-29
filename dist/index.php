@@ -89,15 +89,38 @@ if (isset($data)) {
 echo '<div class="container-fluid main bg-faded">';
 echo '<div id="results" class="container card-section">';
 echo '<div class="row">';
-echo '<div class="col-lg-12 col-md-12 col-lg-sm col-lg-xs text-center">
+echo '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
 			<h3>Here are the officemembers we found for '.$searchaddress.':</h3>
 			</br>
 	  	  </div>';
+
+$b = 0;
+
+echo '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">';
+echo '<ul>';
+
+foreach ($data->officials as $person) {
+
+	$trimmedJob = str_replace(' ', '', $jobs[$b]);
+
+	echo '<li><a href="#'.$trimmedJob.'">'.$jobs[$b].'</li></a>';
+
+	$b++;
+
 }
 
+echo '</ul>';
+echo '</div>';
+
+
+}
+
+$c = 0;
 
 // loop through officials
 foreach ($data->officials as $person) {
+
+	$trimmedJob = str_replace(' ', '', $jobs[$c]);
 
 	$trimmedUrl = str_replace(['http://', 'https://', 'www.', 'www1.'], '', $person->urls[0]);
 
@@ -164,7 +187,7 @@ foreach ($data->officials as $person) {
 
 	// print_r($person);
 	echo '<div class="col-lg-4 col-md-6 col-sm-12">';	
-	echo '<div class="card align-center">';	
+	echo '<div id="'.$trimmedJob.'" class="card align-center">';	
 
 	// photo
 	echo '<div class="card-img-top" style="background-image: url('.(isset($person->photoUrl)? $person->photoUrl : 'images/placeholder.png').'); background-repeat: no-repeat; background-size: 100%; background-position: top;"></div>';
@@ -217,6 +240,7 @@ foreach ($data->officials as $person) {
 
 // add 1 count to $i;
 $i++;
+$c++;
 
 }
 
