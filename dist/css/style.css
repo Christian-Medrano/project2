@@ -15,9 +15,9 @@ main {
 
 }
 
-li.quicklinks {
+.quick-links li {
 	display: inline;
-	list-style-type: none;
+	list-style: none;
 	padding-right: 20px;
 }
 
