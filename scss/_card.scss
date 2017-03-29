@@ -184,7 +184,6 @@
   // @include border-top-radius($card-border-radius-inner);
   min-height: 300px;
   background-color: #777
-  overflow: hidden;
   background-repeat: no-repeat; 
   background-size: cover; 
   background-position: top;
@@ -278,6 +277,7 @@
   .card-columns {
     column-count: $card-columns-count;
     column-gap: $card-columns-gap;
+
 
     .card {
       display: inline-block; // Don't let them vertically span multiple columns
