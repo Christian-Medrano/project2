@@ -103,12 +103,9 @@ foreach ($data->officials as $person) {
 
 	$trimmedJob = str_replace(' ', '', $jobs[$b]);
 
-	echo '<li><a class=".jump-link" href="#'.$trimmedJob.'">'.$jobs[$b].'</a></li>';
-	echo '<li>|</li>';
+	echo '<li><a href="#'.$trimmedJob.'">'.$jobs[$b].'</li></a>';
 
 	$b++;
-
-	
 
 }
 
