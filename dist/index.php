@@ -96,7 +96,7 @@ echo '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
 
 $b = 0;
 
-echo '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">';
+echo '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 quick-links">';
 echo '<ul>';
 
 foreach ($data->officials as $person) {
