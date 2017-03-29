@@ -26,16 +26,30 @@ else {
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" type="image/png" href="icons/favicon.png"/>
+	<script src="js/float-panel.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 
 	<div id="top" class="jumbotron bg-don">
 		<div class="row">
+
+			<!-- wordmark -->
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<img class="main-graphic" src="images/ameche.svg" alt="ameche">
 			</div>
 
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<!-- search form -->
+			<div class="col-lg-12 search">
+				<form  action="" method="GET" class="form-inline">
+					<input style="margin-right: 5px;" type="text" class="form-control search-input" id="searchaddress" name="searchaddress" value="<?php echo $searchaddress; ?>" placeholder="Your City/Zipcode">
+					<button id="myBtn" class="btn btn-outline-secondary" onclick="location.href='#results'">Search</button>
+				</form>
+			</div>
+			
+			<!-- definition -->
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 def">
 				<h1>/<em>ah-mee-chee </em>/</h1>
 				<h4>noun</h4>
 				<ol>
@@ -43,18 +57,11 @@ else {
 					<li><p>the absolute best way to find your local, state, and federal representatives</p></li>
 				</ol>
 			</div>
-
-			<div class="col-lg-12">
-				<form  action="" method="GET" class="form-inline">
-					<input type="text" class="form-control search-input" id="searchaddress" name="searchaddress" value="<?php echo $searchaddress; ?>" placeholder="Your City/Zipcode">
-					<button class="btn btn-outline-secondary" onclick="location.href='#results';">Search</button>
-				</form>
-			</div>
-
 		</div>
 	</div>
 
-	<a id="return-to-top" href="#top"><img src="icons/arrow-up.svg" class="top-return" title="return to top" alt="return to top"></a>
+	<!-- return to top button -->
+	<div id="backtop" data-v-w="300, 1200"><a href=""><span style="font-size: 90px">➪</span><br></a></div>
 
 
 <?php
@@ -77,19 +84,22 @@ else {
 // setup count
 $i = 0;
 
+if (isset($data)) {
+
 echo '<div class="container-fluid main bg-faded">';
 echo '<div id="results" class="container card-section">';
 echo '<div class="row">';
-
 echo '<div class="col-lg-12 col-md-12 col-lg-sm col-lg-xs text-center">
-		<h2>Representatives for '.$searchaddress_final.'</h2>
-	  </div>';
-
-
+			<h3>Here are the officemembers we found for '.$searchaddress.':</h3>
+			</br>
+	  	  </div>';
+}
 
 
 // loop through officials
 foreach ($data->officials as $person) {
+
+	$trimmedUrl = str_replace(['http://', 'https://', 'www.', 'www1.'], '', $person->urls[0]);
 
 	$accountOne = $person->channels[0]->type;
 
@@ -139,24 +149,44 @@ foreach ($data->officials as $person) {
 		$accountFourUrl = "http://www.youtube.com";
 	}
 
+	$accountFive = $person->channels[4]->type;
+
+	if ($accountFive == "GooglePlus") {
+		$accountFiveUrl = "http://plus.google.com";
+	} else if ($accountFive == "Facebook") {
+		$accountFiveUrl = "http://www.facebook.com";
+	} else if ($accountFive == "Twitter") {
+		$accountFiveUrl = "http://www.twitter.com";
+	} else if ($accountFive == "YouTube") {
+		$accountFiveUrl = "http://www.youtube.com";
+	}
+
 
 	// print_r($person);
 	echo '<div class="col-lg-4 col-md-6 col-sm-12">';	
 	echo '<div class="card align-center">';	
+
 	// photo
 	echo '<div class="card-img-top" style="background-image: url('.(isset($person->photoUrl)? $person->photoUrl : 'images/placeholder.png').'); background-repeat: no-repeat; background-size: 100%; background-position: top;"></div>';
 	echo '<div class="card-block">';
+
 	// name
 	echo '<h3>'.$person->name.'</h3>';
+
 	// office
 	echo '<h5>'.$jobs[$i].'</h5>';
+
 	// party
 	echo '<p>'.(isset($person->party)? $person->party :'Party Not Listed').'</p>';
+
 	echo '<ul class="list-group list-group-flush">';
+
 	// phone
-	echo '<li class="list-group-item"><img class="contact-icon" src="icons/phone.svg" alt="Phone"> '.(isset($person->phones[0])? $person->phones[0] :'Not Listed').'</li>';
+	echo '<li class="list-group-item"><img class="contact-icon" src="icons/phone.svg" alt="Phone">'.(isset($person->phones[0])? '<a href="tel:'.$person->phones[0].'">'.$person->phones[0].'</a>' :'Not Listed').'</li>';
+
 	// website
-	echo '<li class="list-group-item"><img class="contact-icon" src="icons/web.svg" alt="website"><a href="'.(isset($person->urls[0])? $person->urls[0] :'Not Listed').'" target="blank">website</a></li>';
+	echo '<li class="list-group-item"><img class="contact-icon" src="icons/web.svg" alt="website">'.(isset($person->urls[0])? '<a href="'.$person->urls[0].'" target="_blank">'.$trimmedUrl.'</a>' : 'Not Listed').'</li>';
+
 	// address
 	echo '<li class="list-group-item">
 			'.(isset($person->address[0])? $person->address[0]->line1 :'Address not listed').'
@@ -167,6 +197,7 @@ foreach ($data->officials as $person) {
 			'.(isset($person->address[0])? $person->address[0]->state :'').' 
 			'.(isset($person->address[0])? $person->address[0]->zip :'').'
 		  </li>';
+
 	// social media
 	echo '<li class="list-group-item">
 			'.(isset($person->channels[0])? '<a href="'.$accountOneUrl.'/'.$person->channels[0]->id.'" target="_blank"><img class="sm-icon" src="icons/'.$person->channels[0]->type.'.svg" alt="'.$person->channels[0]->type.'"/></a>' : 'No Social Media').'
@@ -176,13 +207,17 @@ foreach ($data->officials as $person) {
 			'.(isset($person->channels[2])? '<a href="'.$accountThreeUrl.'/'.$person->channels[2]->id.'" target="_blank"><img class="sm-icon" src="icons/'.$person->channels[2]->type.'.svg" alt="'.$person->channels[2]->type.'"/></a>' : '').'
 
 			'.(isset($person->channels[3])? '<a href="'.$accountFourUrl.'/'.$person->channels[3]->id.'" target="_blank"><img class="sm-icon" src="icons/'.$person->channels[3]->type.'.svg" alt="'.$person->channels[3]->type.'"/></a>' : '').'
+
+			'.(isset($person->channels[4])? '<a href="'.$accountFiveUrl.'/'.$person->channels[4]->id.'" target="_blank"><img class="sm-icon" src="icons/'.$person->channels[4]->type.'.svg" alt="'.$person->channels[4]->type.'"/></a>' : '').'
 		  </li>';
 	echo '</ul>';
 	echo '</div>';
 	echo '</div>';
 	echo '</div>';
+
 // add 1 count to $i;
 $i++;
+
 }
 
 echo '</div>';
@@ -191,40 +226,28 @@ echo '</div>';
 
 ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
 <!-- smooth scroll -->
-<script >
-		$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top - 50
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
-</script>
-<!-- /smooth scroll -->
-
-<!-- return to top button -->
-<script type="text/javascript">
-	// ===== Scroll to Top ==== 
-	$(window).scroll(function() {
-	    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-	        $('#return-to-top').fadeIn(200);    // Fade in the arrow
-	    } else {
-	        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+<script>
+	$(function() {
+	  $('a[href*="#"]:not([href="#"])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html, body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
 	    }
+	  });
 	});
 </script>
-<!-- /return to top button -->
+
+
+
+
+
 
 
 </body>
